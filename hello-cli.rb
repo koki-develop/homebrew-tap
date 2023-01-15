@@ -5,20 +5,20 @@
 class HelloCli < Formula
   desc ""
   homepage ""
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/hello-cli/releases/download/v0.2.0/hello-cli_Darwin_arm64.tar.gz"
-      sha256 "605c1e0fcc5a791af1aa2ea4ec68a0e74427c8e03da4268bc209ab2689542122"
+      url "https://github.com/koki-develop/hello-cli/releases/download/v0.3.0/hello-cli_Darwin_arm64.tar.gz"
+      sha256 "c89d69cfa713d740c84bb73900ca987a771bae34ee4099ece4dac9931c74be6a"
 
       def install
         bin.install "hello-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/hello-cli/releases/download/v0.2.0/hello-cli_Darwin_x86_64.tar.gz"
-      sha256 "235d2cd4dda6f56ca93f6af94620ea07068769bf0c9a04c27614598860be0c34"
+      url "https://github.com/koki-develop/hello-cli/releases/download/v0.3.0/hello-cli_Darwin_x86_64.tar.gz"
+      sha256 "e58bc73da3615884a7803341a90a5690c1cd9212b6be60a03d17621a89d7121b"
 
       def install
         bin.install "hello-cli"
@@ -28,16 +28,16 @@ class HelloCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/hello-cli/releases/download/v0.2.0/hello-cli_Linux_x86_64.tar.gz"
-      sha256 "30105dc5c2a3257abdda53ea566a0a54294852108f93a96923963fddc5abad6e"
+      url "https://github.com/koki-develop/hello-cli/releases/download/v0.3.0/hello-cli_Linux_x86_64.tar.gz"
+      sha256 "c4e2087c845bce4750585cb1479e2b9432d032ef3268415ad1f7f5b99841f9da"
 
       def install
         bin.install "hello-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/hello-cli/releases/download/v0.2.0/hello-cli_Linux_arm64.tar.gz"
-      sha256 "a4369ee9e9fdb81960d6d6874809d20ac717bb122522494a046cee7e4b27ec14"
+      url "https://github.com/koki-develop/hello-cli/releases/download/v0.3.0/hello-cli_Linux_arm64.tar.gz"
+      sha256 "98f7be0419c9c43159c4d685d1c09b08e5cec3b58593da267c8396ce8ff7211d"
 
       def install
         bin.install "hello-cli"
