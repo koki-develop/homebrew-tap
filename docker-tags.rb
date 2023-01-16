@@ -5,20 +5,20 @@
 class DockerTags < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/docker-tags/releases/download/v0.1.0/docker-tags_Darwin_x86_64.tar.gz"
-      sha256 "81c5e4d87bd1da07c1661d4a508aae51b999a707e04503e339530f6adfbee27b"
+      url "https://github.com/koki-develop/docker-tags/releases/download/v0.1.1/docker-tags_Darwin_x86_64.tar.gz"
+      sha256 "a8fc316fda62cc6510b7c3c986c4b58648ec2cc3e9d58bb74b26208fe358f412"
 
       def install
         bin.install "docker-tags"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/docker-tags/releases/download/v0.1.0/docker-tags_Darwin_arm64.tar.gz"
-      sha256 "93703990acf839593bf35ab0482ee8fa4229c47b751420c21b9022b2066ab15a"
+      url "https://github.com/koki-develop/docker-tags/releases/download/v0.1.1/docker-tags_Darwin_arm64.tar.gz"
+      sha256 "4b3d40e22ed0e6ec89cf2dbb35922191f91b5c2f74d298baf37492313e1c5138"
 
       def install
         bin.install "docker-tags"
@@ -27,17 +27,17 @@ class DockerTags < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/docker-tags/releases/download/v0.1.0/docker-tags_Linux_x86_64.tar.gz"
-      sha256 "0749a24279c9d19258114d67768c527e3258b2d2776ecf18ecc3f01c379b5cd3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/docker-tags/releases/download/v0.1.1/docker-tags_Linux_arm64.tar.gz"
+      sha256 "1a491b48da8c0df1c0e8e7f05260ba87dfe3de990a8bceb35664665f864513c8"
 
       def install
         bin.install "docker-tags"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/docker-tags/releases/download/v0.1.0/docker-tags_Linux_arm64.tar.gz"
-      sha256 "4ddd6e448dc3466d3fd646d4d035f0355e3c89caf02609a89d63bf37101b8d8e"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/docker-tags/releases/download/v0.1.1/docker-tags_Linux_x86_64.tar.gz"
+      sha256 "84d3be97c9af87b89960ec88114cb8ca121688f3cdd41937421a43357fa14f77"
 
       def install
         bin.install "docker-tags"
