@@ -5,20 +5,20 @@
 class TodoistCli < Formula
   desc ""
   homepage ""
-  version "0.5.0"
+  version "0.6.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/todoist-cli/releases/download/v0.5.0/todoist-cli_Darwin_arm64.tar.gz"
-      sha256 "0bfa5d77a9c6dca684353ebcc75e4f8d480f13626b4b5e81a8e7da94b07abf93"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/todoist-cli/releases/download/v0.6.0/todoist-cli_Darwin_x86_64.tar.gz"
+      sha256 "f3af92bb95ce20fda7f697019b67fdca37d0b0424f58b283cd1381a6de85fc40"
 
       def install
         bin.install "todoist-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/todoist-cli/releases/download/v0.5.0/todoist-cli_Darwin_x86_64.tar.gz"
-      sha256 "44d278609d2eccddd018cbf3664e43bbe24fe8c18cbf930b6e3a4ae357592a3f"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/todoist-cli/releases/download/v0.6.0/todoist-cli_Darwin_arm64.tar.gz"
+      sha256 "7f9b5d801831101306476e64f21316904471060e54ec0991e83335e86edd03d5"
 
       def install
         bin.install "todoist-cli"
@@ -27,17 +27,17 @@ class TodoistCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/todoist-cli/releases/download/v0.5.0/todoist-cli_Linux_arm64.tar.gz"
-      sha256 "b2e911b98524963e548cb291233967f236debbc16af5c4900aa5f0f75a1c8441"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/todoist-cli/releases/download/v0.6.0/todoist-cli_Linux_x86_64.tar.gz"
+      sha256 "74267e3b50fb95ac90a70495774a3dc8c5a7d54ac173934a59efef09afc0105d"
 
       def install
         bin.install "todoist-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/todoist-cli/releases/download/v0.5.0/todoist-cli_Linux_x86_64.tar.gz"
-      sha256 "ef5e8bee550fc42640c33bf8a9fa4ec526b7fc38813242dc2abef342c85a1ceb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/todoist-cli/releases/download/v0.6.0/todoist-cli_Linux_arm64.tar.gz"
+      sha256 "632b925a55c1dceed083b04e9ca1145fe4db232aea6ee5a2bfca052d0c61e0dd"
 
       def install
         bin.install "todoist-cli"
