@@ -5,22 +5,22 @@
 class Clive < Formula
   desc "Automates terminal operations and lets you view them live via a browser"
   homepage "https://github.com/koki-develop/clive"
-  version "0.10.6"
+  version "0.11.0"
 
   depends_on "ttyd"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/clive/releases/download/v0.10.6/clive_Darwin_arm64.tar.gz"
-      sha256 "c2c5eedadd6b7ce26332f8e060b94c5d0c27ac4f1a3e576a26e48152f7c9060e"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/clive/releases/download/v0.11.0/clive_Darwin_x86_64.tar.gz"
+      sha256 "1f5af0d8599db9ff38b3ca1f6ddf4984f3d22fd756941ac0557d4efbedd93c87"
 
       def install
         bin.install "clive"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/clive/releases/download/v0.10.6/clive_Darwin_x86_64.tar.gz"
-      sha256 "d07f0bb917350d21117c39e3f52480fe4efc00f65cd2d9ce6f42ff7ebc8e898a"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/clive/releases/download/v0.11.0/clive_Darwin_arm64.tar.gz"
+      sha256 "65c9015082afa70517fcdcecaa2540194b2d255218d6c7ae7e02e68747a07ecf"
 
       def install
         bin.install "clive"
@@ -30,16 +30,16 @@ class Clive < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/clive/releases/download/v0.10.6/clive_Linux_arm64.tar.gz"
-      sha256 "e61501ef2d4d10f7d7a9fd7846a0de2b26f9be112d2c2285962eb806eeb860fc"
+      url "https://github.com/koki-develop/clive/releases/download/v0.11.0/clive_Linux_arm64.tar.gz"
+      sha256 "4723b73b33088dbc9c5d0a06bb510cfe0589fa69d88fa9d1ff683ce013f7b95c"
 
       def install
         bin.install "clive"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/clive/releases/download/v0.10.6/clive_Linux_x86_64.tar.gz"
-      sha256 "18a23033b99468a3ef7cb9b3bc97cd651bcede4ca04c543f45d5efeb196647df"
+      url "https://github.com/koki-develop/clive/releases/download/v0.11.0/clive_Linux_x86_64.tar.gz"
+      sha256 "fa478d4b8c767573d1690f51f10c969fd53e642e43e3ed1599a083dd5e71bfe5"
 
       def install
         bin.install "clive"
