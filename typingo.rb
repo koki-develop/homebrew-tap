@@ -5,20 +5,20 @@
 class Typingo < Formula
   desc ""
   homepage ""
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/typingo/releases/download/v0.2.0/typingo_Darwin_x86_64.tar.gz"
-      sha256 "f00358e5c00d7f599c24ffa4108aab87b09e12cd657326d29083a91a10261ca0"
+      url "https://github.com/koki-develop/typingo/releases/download/v0.3.0/typingo_Darwin_x86_64.tar.gz"
+      sha256 "1c8016db0afeb1d5ef466a9a3f55496ce2d6fa5956075805e18fcb9df98e604e"
 
       def install
         bin.install "typingo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/typingo/releases/download/v0.2.0/typingo_Darwin_arm64.tar.gz"
-      sha256 "93b77a8dac3d34389f45d3dedd355c0ec195451cd6554fb8c7c6610542e9f576"
+      url "https://github.com/koki-develop/typingo/releases/download/v0.3.0/typingo_Darwin_arm64.tar.gz"
+      sha256 "8880e3b3d0c82c8b831e65379977199479f8a51e4986356afa97171f588d471d"
 
       def install
         bin.install "typingo"
@@ -28,16 +28,16 @@ class Typingo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/typingo/releases/download/v0.2.0/typingo_Linux_arm64.tar.gz"
-      sha256 "d42b7169e97252ba74e7d88e05229ca89167fc31fc1f2c06f23bbbe1f7029cfe"
+      url "https://github.com/koki-develop/typingo/releases/download/v0.3.0/typingo_Linux_arm64.tar.gz"
+      sha256 "87f2cfc874309662522cac9f4f5832901518f3651571d9cd54cefa378d74e2d7"
 
       def install
         bin.install "typingo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/typingo/releases/download/v0.2.0/typingo_Linux_x86_64.tar.gz"
-      sha256 "39bb5a64fb204b8afcbe157a942a3a1428baa06c7ae2165f341168c8f469b32c"
+      url "https://github.com/koki-develop/typingo/releases/download/v0.3.0/typingo_Linux_x86_64.tar.gz"
+      sha256 "691f73c1d164dfbc299bfc391fe0350c9cdba235882c171bca084b8110fbff5f"
 
       def install
         bin.install "typingo"
