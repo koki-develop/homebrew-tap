@@ -5,20 +5,20 @@
 class Gotrash < Formula
   desc ""
   homepage ""
-  version "0.3.1"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.3.1/gotrash_Darwin_x86_64.tar.gz"
-      sha256 "578394bd424b181713bd3451c5815731a4bf6b5d0761df1197f04b60fd57c84e"
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.4.0/gotrash_Darwin_x86_64.tar.gz"
+      sha256 "6b6c381502bba96b178f5984bca25d37eff84b54c40ebd54eb937112b6cb2002"
 
       def install
         bin.install "gotrash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.3.1/gotrash_Darwin_arm64.tar.gz"
-      sha256 "973d3ebcee211abc74d9bac737ddd25716841c5616cf99a6a722d38a65dd77d5"
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.4.0/gotrash_Darwin_arm64.tar.gz"
+      sha256 "1f70c2d7d215c1583d3c6c80935d1e165e6dd6016e87ab346a89b5468ab2868a"
 
       def install
         bin.install "gotrash"
@@ -27,17 +27,17 @@ class Gotrash < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.3.1/gotrash_Linux_arm64.tar.gz"
-      sha256 "baad849fcd8ecde85fa60fab96f418f342c2d59f2917275f3c1971b4eac0719e"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.4.0/gotrash_Linux_x86_64.tar.gz"
+      sha256 "3d5c2f1eb9736414f62f51a9d42fefeed75a20b7a74d8534fa28d9d5bd73a677"
 
       def install
         bin.install "gotrash"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.3.1/gotrash_Linux_x86_64.tar.gz"
-      sha256 "22d4b2e18c029804c75023d05e046c13d82006659717df3ae40320a14054a28e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.4.0/gotrash_Linux_arm64.tar.gz"
+      sha256 "4529b5a2f88bdbab8ba87d50473940b4559c7f68868c12adfa06fc5dea40b3ee"
 
       def install
         bin.install "gotrash"
