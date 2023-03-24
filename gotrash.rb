@@ -5,20 +5,20 @@
 class Gotrash < Formula
   desc ""
   homepage ""
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.4.0/gotrash_Darwin_x86_64.tar.gz"
-      sha256 "6b6c381502bba96b178f5984bca25d37eff84b54c40ebd54eb937112b6cb2002"
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.5.0/gotrash_Darwin_x86_64.tar.gz"
+      sha256 "c94b9a25f83e191e34213268feb7006d039c6b1f6abfba51af5d517ac33d9f67"
 
       def install
         bin.install "gotrash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.4.0/gotrash_Darwin_arm64.tar.gz"
-      sha256 "1f70c2d7d215c1583d3c6c80935d1e165e6dd6016e87ab346a89b5468ab2868a"
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.5.0/gotrash_Darwin_arm64.tar.gz"
+      sha256 "25764ba3930537318f3fce7423eeb573eb78f4c06eb764faabef2921cd1aecde"
 
       def install
         bin.install "gotrash"
@@ -28,16 +28,16 @@ class Gotrash < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.4.0/gotrash_Linux_x86_64.tar.gz"
-      sha256 "3d5c2f1eb9736414f62f51a9d42fefeed75a20b7a74d8534fa28d9d5bd73a677"
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.5.0/gotrash_Linux_x86_64.tar.gz"
+      sha256 "a41b16b3a99bf7ade1f96931d88965427854d9153f1cde9ae8bda751700d21ad"
 
       def install
         bin.install "gotrash"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.4.0/gotrash_Linux_arm64.tar.gz"
-      sha256 "4529b5a2f88bdbab8ba87d50473940b4559c7f68868c12adfa06fc5dea40b3ee"
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.5.0/gotrash_Linux_arm64.tar.gz"
+      sha256 "e76124e056f44d418ec69b4dab0749158582fe7a90efc23f09846ceac91eea8c"
 
       def install
         bin.install "gotrash"
