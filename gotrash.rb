@@ -5,20 +5,20 @@
 class Gotrash < Formula
   desc ""
   homepage ""
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.6.0/gotrash_Darwin_arm64.tar.gz"
-      sha256 "edb05ed1516fe8ac743b12eac63722349b59801be7d6a895568fbf1c53f28d2e"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.7.0/gotrash_Darwin_x86_64.tar.gz"
+      sha256 "aa40ad109b94c511c02e87f5f156708089a55034c9ed6609f0ebd75a6f17fb40"
 
       def install
         bin.install "gotrash"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.6.0/gotrash_Darwin_x86_64.tar.gz"
-      sha256 "cf0f8ac3f2a5a6137c1ff00da9fb87e9cf993365cdbdb044eaa9be2ee875463d"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.7.0/gotrash_Darwin_arm64.tar.gz"
+      sha256 "2a2178117dbf390401efb172a71d75cf17075064f13553a3f6630cbc2fdd7f69"
 
       def install
         bin.install "gotrash"
@@ -27,17 +27,17 @@ class Gotrash < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.6.0/gotrash_Linux_x86_64.tar.gz"
-      sha256 "912065544c542d88a3c470fc1c3bfee35a24f0a87236b2dc2259ba4ee02f9f74"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.7.0/gotrash_Linux_arm64.tar.gz"
+      sha256 "5f8065a787db73d56f8a1bf73c53d57bd9274086511bfd763e8915b64f9243aa"
 
       def install
         bin.install "gotrash"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/gotrash/releases/download/v0.6.0/gotrash_Linux_arm64.tar.gz"
-      sha256 "993be51f48d6bc40350b85131b6ebad886f7b20b54f2f7770fab2b3d7076aa1f"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/gotrash/releases/download/v0.7.0/gotrash_Linux_x86_64.tar.gz"
+      sha256 "287d78086b47c15404aab4e60ee0e565754f70f88473a926d7363ec343ee296d"
 
       def install
         bin.install "gotrash"
