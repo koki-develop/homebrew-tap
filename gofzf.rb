@@ -5,20 +5,20 @@
 class Gofzf < Formula
   desc ""
   homepage ""
-  version "0.9.0"
+  version "0.10.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.9.0/gofzf_Darwin_x86_64.tar.gz"
-      sha256 "ad76f3e30938b2052586118aea2120fd3ab8c1f58f804ff671e0d9681ce0be95"
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.10.0/gofzf_Darwin_x86_64.tar.gz"
+      sha256 "18860ac8a4ac414dca0465e057f26066e128e0afbaaedd679867b6c25e6deab8"
 
       def install
         bin.install "gofzf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.9.0/gofzf_Darwin_arm64.tar.gz"
-      sha256 "9a6bcc16415e9b6a01e974a757af258fec01cc71ec58f4db7a915fa0129fd1d6"
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.10.0/gofzf_Darwin_arm64.tar.gz"
+      sha256 "8d1a1e124451f5cd760f8d5520d36540edd8f6c29049687f0e99dbcccd4b9757"
 
       def install
         bin.install "gofzf"
@@ -28,16 +28,16 @@ class Gofzf < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.9.0/gofzf_Linux_arm64.tar.gz"
-      sha256 "a111374eae34bc11041834c7ac8242b65d25e311499de1cc474c544f72247f3f"
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.10.0/gofzf_Linux_arm64.tar.gz"
+      sha256 "6500b1c409c9e3bedfcf7d5dea815d6da669b2959986b207bba6c976f4273c95"
 
       def install
         bin.install "gofzf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.9.0/gofzf_Linux_x86_64.tar.gz"
-      sha256 "2826c789b4c9b67e838b3d6da68dffe52d21e61b3848cdff449b864b49ea3998"
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.10.0/gofzf_Linux_x86_64.tar.gz"
+      sha256 "cf3aea6675fae6b3f8501ffed73f1abb55af93486ee9a50186c20293223c63af"
 
       def install
         bin.install "gofzf"
