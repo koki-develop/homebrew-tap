@@ -5,20 +5,20 @@
 class Gonvert < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gonvert/releases/download/v0.1.0/gonvert_Darwin_x86_64.tar.gz"
-      sha256 "1db950c2a5f5e1764b269f68ad3dcfdcd0723ea1f89738c16dc488aaced58d4d"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/gonvert/releases/download/v0.1.1/gonvert_Darwin_arm64.tar.gz"
+      sha256 "f5eff4a276270dc1863266b41930df5f28369b1c1523b0a224ab3006ca61e627"
 
       def install
         bin.install "gonvert"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gonvert/releases/download/v0.1.0/gonvert_Darwin_arm64.tar.gz"
-      sha256 "72306d9e4cd940725c5062ea569e50e2506faa233c35a67ffdceb0872dc672bb"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/gonvert/releases/download/v0.1.1/gonvert_Darwin_x86_64.tar.gz"
+      sha256 "f53c0de42bb30804c70c89d4c4f230fe1a520ffc985cead0af9790dae7cf810f"
 
       def install
         bin.install "gonvert"
@@ -27,17 +27,17 @@ class Gonvert < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/gonvert/releases/download/v0.1.0/gonvert_Linux_arm64.tar.gz"
-      sha256 "1ac3035dec9817a3945a49f5edb17466be9d5789fb8710bb3fc8a9f063124746"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/gonvert/releases/download/v0.1.1/gonvert_Linux_x86_64.tar.gz"
+      sha256 "719c0256d86dd67cd02cc9b3e69eda7c7983f9d28a8857db30d9e8b0c66b1f38"
 
       def install
         bin.install "gonvert"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gonvert/releases/download/v0.1.0/gonvert_Linux_x86_64.tar.gz"
-      sha256 "09effbd2670ec9aa3d49a9d69fc799c29cc6410f527f8af7da523679aeda62f0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/gonvert/releases/download/v0.1.1/gonvert_Linux_arm64.tar.gz"
+      sha256 "4b5fe127b6e0c10e842070f8e2fee02553d52022f8d6bd6dec966bc7503ac405"
 
       def install
         bin.install "gonvert"
