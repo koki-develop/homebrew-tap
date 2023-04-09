@@ -5,20 +5,20 @@
 class Gofzf < Formula
   desc ""
   homepage ""
-  version "0.11.1"
+  version "0.11.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.11.1/gofzf_Darwin_x86_64.tar.gz"
-      sha256 "9712774c8d3364dcd399d51fae8eef91df2c048b2fc45860b79bb861fb06dc1e"
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.11.2/gofzf_Darwin_x86_64.tar.gz"
+      sha256 "979834f10d8fd197a513a6e62944b9e7b6b56d2826b53b89ba5d3a2bb61a5c06"
 
       def install
         bin.install "gofzf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.11.1/gofzf_Darwin_arm64.tar.gz"
-      sha256 "54cd75c2e030badc204dfe829a2eedd25ee03203e8cc1dd4fd782157a10da7d8"
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.11.2/gofzf_Darwin_arm64.tar.gz"
+      sha256 "842570417257ad983a453da306437fe1e46bdc1edbf0c4e4a1b10a467ca30803"
 
       def install
         bin.install "gofzf"
@@ -27,17 +27,17 @@ class Gofzf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.11.1/gofzf_Linux_arm64.tar.gz"
-      sha256 "4261a046c1a7875d63bdcecef3a9bc3eaeb23c54cc6818f8b1c662a9827ec550"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.11.2/gofzf_Linux_x86_64.tar.gz"
+      sha256 "a00e90634c80482fe46f22ae0079d584c309e7f84f83ac49680b98a24ce021bb"
 
       def install
         bin.install "gofzf"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.11.1/gofzf_Linux_x86_64.tar.gz"
-      sha256 "c8c23dccbaf29a38dac30e7ae21dc98b8e233b26519ab44d43784b663cca7ba0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.11.2/gofzf_Linux_arm64.tar.gz"
+      sha256 "8e30506bf52237b1c3d320e61a30c422a1b18e7a6dd16645899a8ad23f3ee856"
 
       def install
         bin.install "gofzf"
