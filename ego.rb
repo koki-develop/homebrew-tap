@@ -5,20 +5,20 @@
 class Ego < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/ego/releases/download/v0.1.0/ego_Darwin_x86_64.tar.gz"
-      sha256 "884efe8283cb44412a263f4c80c19b22e4e6113e6a36024fde1b9ffb59a22830"
+      url "https://github.com/koki-develop/ego/releases/download/v0.2.0/ego_Darwin_x86_64.tar.gz"
+      sha256 "7d7bde827199a21a306844ecea4b80f37a46508f692d98c6b14b7473c91454c8"
 
       def install
         bin.install "ego"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/ego/releases/download/v0.1.0/ego_Darwin_arm64.tar.gz"
-      sha256 "98a6480d3aa9e06586092413071f7ee17220640e6c3f2acd7c3f39258f5fa524"
+      url "https://github.com/koki-develop/ego/releases/download/v0.2.0/ego_Darwin_arm64.tar.gz"
+      sha256 "48543ff48534368d7036f286039511ebcd82d63728c33295f88d3700cf2c9864"
 
       def install
         bin.install "ego"
@@ -27,17 +27,17 @@ class Ego < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/ego/releases/download/v0.1.0/ego_Linux_arm64.tar.gz"
-      sha256 "d78d56a109402465e4e4cf2063763fbb2dbd10eb370ec20c06388497e359dfb5"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/ego/releases/download/v0.2.0/ego_Linux_x86_64.tar.gz"
+      sha256 "a750e00187e85f457897b0af38520bec970b844680d1478014dd4a43fe8c6bd1"
 
       def install
         bin.install "ego"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/ego/releases/download/v0.1.0/ego_Linux_x86_64.tar.gz"
-      sha256 "0fbbd3bc329ba4203509f8ef51a912fb1ab2a472e0bbd0d74835ea4153f79564"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/ego/releases/download/v0.2.0/ego_Linux_arm64.tar.gz"
+      sha256 "5ec3976201bd880ed562467dc40572d2f856d5c34986601f52ceac70254dc2a7"
 
       def install
         bin.install "ego"
