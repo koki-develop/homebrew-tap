@@ -5,20 +5,20 @@
 class Slp < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/slp/releases/download/v0.1.0/slp_Darwin_x86_64.tar.gz"
-      sha256 "198fe2248414ffe3f1b0ee3fbf91939de18adfa930b216da071d5f5473f37e63"
+      url "https://github.com/koki-develop/slp/releases/download/v0.2.0/slp_Darwin_x86_64.tar.gz"
+      sha256 "b1015a79c0c460400f57127fcd0bb6fcd9b8841157cf7348540b401c9787aadb"
 
       def install
         bin.install "slp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/slp/releases/download/v0.1.0/slp_Darwin_arm64.tar.gz"
-      sha256 "8c1b375f6341080099af61a8462de9ddd32ff271e3a68bfdc5170c984deebb1a"
+      url "https://github.com/koki-develop/slp/releases/download/v0.2.0/slp_Darwin_arm64.tar.gz"
+      sha256 "01ea3f111bd524c53846b6a7a8baf1af8bd98e13fa8d93e426c92b946844a646"
 
       def install
         bin.install "slp"
@@ -28,16 +28,16 @@ class Slp < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/slp/releases/download/v0.1.0/slp_Linux_x86_64.tar.gz"
-      sha256 "85706d633365ba06dffe2ee30d1905c8e88682f27f1cfec09f83baf7587b85e1"
+      url "https://github.com/koki-develop/slp/releases/download/v0.2.0/slp_Linux_x86_64.tar.gz"
+      sha256 "67940568e734e0f2dba5141280281353021f7d9e0a736f9a6ec6600bfb5e1ae2"
 
       def install
         bin.install "slp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/slp/releases/download/v0.1.0/slp_Linux_arm64.tar.gz"
-      sha256 "63e41c08bc50bab9cdca4becb79a596558240a3d1073c98be6c784ea4a8b0ceb"
+      url "https://github.com/koki-develop/slp/releases/download/v0.2.0/slp_Linux_arm64.tar.gz"
+      sha256 "193d978a0030486fec0f7d17f3fa1596600b56a0fdfc6a2a6e840bad37cab838"
 
       def install
         bin.install "slp"
