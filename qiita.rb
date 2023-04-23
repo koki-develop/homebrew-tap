@@ -5,20 +5,20 @@
 class Qiita < Formula
   desc ""
   homepage ""
-  version "0.0.4"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.0.4/qiita_Darwin_x86_64.tar.gz"
-      sha256 "ad7b4bc28402f5cea5f9a3638953b8cb3394d09cc5ab4c0aa3457ce7fd635248"
+      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.1.0/qiita_Darwin_x86_64.tar.gz"
+      sha256 "2e960332cb4741bfbcdc2d36cbcf055a3b639b5b490cf1fff6eea5fb9cc165b6"
 
       def install
         bin.install "qiita"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.0.4/qiita_Darwin_arm64.tar.gz"
-      sha256 "046a1c543a123e71cb941d3fc76a266a8642810ec245e4b537578368e91b7775"
+      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.1.0/qiita_Darwin_arm64.tar.gz"
+      sha256 "62264bfeb0d7a40c0a45f2ce73e1e38e54551036662b5c96b9ff7cef976930de"
 
       def install
         bin.install "qiita"
@@ -28,16 +28,16 @@ class Qiita < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.0.4/qiita_Linux_arm64.tar.gz"
-      sha256 "87742cd7963183db915e5e2bbb36133b3f2e391fce7fdb8fb557b9044181d9e9"
+      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.1.0/qiita_Linux_arm64.tar.gz"
+      sha256 "1703db300ffd24fce2cc0f92e1df908bc92240a1b3b372749a85c5f292e175f6"
 
       def install
         bin.install "qiita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.0.4/qiita_Linux_x86_64.tar.gz"
-      sha256 "09fd1c060c7e88879d1e87cb76b1b3db5acb7c470731b6bf32c86ffeff3e1050"
+      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.1.0/qiita_Linux_x86_64.tar.gz"
+      sha256 "2abfb63403e2bc1b5d2cb8aced3ece9cd4bbb8c6a277abee30f35865518fc8c4"
 
       def install
         bin.install "qiita"
