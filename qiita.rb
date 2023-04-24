@@ -5,20 +5,20 @@
 class Qiita < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.1.0/qiita_Darwin_x86_64.tar.gz"
-      sha256 "2e960332cb4741bfbcdc2d36cbcf055a3b639b5b490cf1fff6eea5fb9cc165b6"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.2.0/qiita_Darwin_arm64.tar.gz"
+      sha256 "2ee9f1f5bd49dd6ef65f89c8f22d815207a18515389a1e4ef072f14fba9f10c8"
 
       def install
         bin.install "qiita"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.1.0/qiita_Darwin_arm64.tar.gz"
-      sha256 "62264bfeb0d7a40c0a45f2ce73e1e38e54551036662b5c96b9ff7cef976930de"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.2.0/qiita_Darwin_x86_64.tar.gz"
+      sha256 "2264a9d003bdb3387537d92e91e62d72bd0d33c56b1da4902668a2ecd5570c58"
 
       def install
         bin.install "qiita"
@@ -28,16 +28,16 @@ class Qiita < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.1.0/qiita_Linux_arm64.tar.gz"
-      sha256 "1703db300ffd24fce2cc0f92e1df908bc92240a1b3b372749a85c5f292e175f6"
+      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.2.0/qiita_Linux_arm64.tar.gz"
+      sha256 "b6776e4589b3985929b61885e1a0a460416fcb04a428733239568d32104c9ecb"
 
       def install
         bin.install "qiita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.1.0/qiita_Linux_x86_64.tar.gz"
-      sha256 "2abfb63403e2bc1b5d2cb8aced3ece9cd4bbb8c6a277abee30f35865518fc8c4"
+      url "https://github.com/koki-develop/qiita-cli/releases/download/v0.2.0/qiita_Linux_x86_64.tar.gz"
+      sha256 "a2ad491c6548d453cfa0be1552da508d31be4dfb64809e31c7480dd9285bed16"
 
       def install
         bin.install "qiita"
