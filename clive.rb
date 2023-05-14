@@ -5,22 +5,22 @@
 class Clive < Formula
   desc "Automates terminal operations and lets you view them live via a browser"
   homepage "https://github.com/koki-develop/clive"
-  version "0.12.3"
+  version "0.12.4"
 
   depends_on "ttyd"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/clive/releases/download/v0.12.3/clive_Darwin_arm64.tar.gz"
-      sha256 "1a0bc4341c02f99d60a09a754d7f7349b6e291a188fc0d62b993881c0d58c5a9"
+      url "https://github.com/koki-develop/clive/releases/download/v0.12.4/clive_Darwin_arm64.tar.gz"
+      sha256 "dbe0e1114d59333fd31fde8ff148a2a06d006b4b5668e850f6921481b8b20fc3"
 
       def install
         bin.install "clive"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/clive/releases/download/v0.12.3/clive_Darwin_x86_64.tar.gz"
-      sha256 "16b281bcd1ed11c6ce1e532b67f798324d400719800fb1234e7b2328b189aa9d"
+      url "https://github.com/koki-develop/clive/releases/download/v0.12.4/clive_Darwin_x86_64.tar.gz"
+      sha256 "c827b9124bc4f78a0c1b1d7b2f31a34bd508c5a1690d9ca577ce9dde25906c22"
 
       def install
         bin.install "clive"
@@ -30,16 +30,16 @@ class Clive < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/clive/releases/download/v0.12.3/clive_Linux_arm64.tar.gz"
-      sha256 "a2898e7c5ab826dfcf4f07cea790f5a88647b9924e3cfe3173ebf279195ecfb2"
+      url "https://github.com/koki-develop/clive/releases/download/v0.12.4/clive_Linux_arm64.tar.gz"
+      sha256 "e3b170d09f62169c8dec8997c500408587b864292770a845ef9312c904e01df3"
 
       def install
         bin.install "clive"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/clive/releases/download/v0.12.3/clive_Linux_x86_64.tar.gz"
-      sha256 "d3acd3a5aa0ac3b478565b039479443fefc5fb08ad7f343531f9565712ff8aef"
+      url "https://github.com/koki-develop/clive/releases/download/v0.12.4/clive_Linux_x86_64.tar.gz"
+      sha256 "8d89a8153119907bf9a7e0128d43ba4d932ea5806793ec8cf1bfbaed844a71c8"
 
       def install
         bin.install "clive"
