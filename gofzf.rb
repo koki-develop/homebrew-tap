@@ -5,20 +5,20 @@
 class Gofzf < Formula
   desc ""
   homepage ""
-  version "0.14.2"
+  version "0.15.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.14.2/gofzf_Darwin_x86_64.tar.gz"
-      sha256 "6b76fddb29632592c7621279ff30c18a1ac7be01c571022f98981081dd2064f9"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.15.0/gofzf_Darwin_arm64.tar.gz"
+      sha256 "d482c389d282049573bdc40c4e79910a6f489649cc423efc99ad89d8d385480f"
 
       def install
         bin.install "gofzf"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.14.2/gofzf_Darwin_arm64.tar.gz"
-      sha256 "ce224868b54188f211ac10e04185078f0b97014812c4e1584c9488b575dd09ce"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.15.0/gofzf_Darwin_x86_64.tar.gz"
+      sha256 "89aef0d8f422a91da342946caf159f72a76e0c784c7c7aaa8cdae244fb57b2de"
 
       def install
         bin.install "gofzf"
@@ -27,17 +27,17 @@ class Gofzf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.14.2/gofzf_Linux_arm64.tar.gz"
-      sha256 "5faf9fad9b3dddcfa1400fb7a52c79b8c71d9242d0005c9806d03ddb17bd56a5"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.15.0/gofzf_Linux_x86_64.tar.gz"
+      sha256 "49e3ce8864feedde91c03dcfd42eaaf963fd933b176a51e3915a6eb39adc662b"
 
       def install
         bin.install "gofzf"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/go-fzf/releases/download/v0.14.2/gofzf_Linux_x86_64.tar.gz"
-      sha256 "5b1c59d55fd90a60a6f58e19ddf4817c054ae6c0fa91c6e8c639dbfcb04bf5d3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/go-fzf/releases/download/v0.15.0/gofzf_Linux_arm64.tar.gz"
+      sha256 "4556453c7797fb3f91e8de98b2576eae8785205d7c48f5896425ae5bdd9d0d03"
 
       def install
         bin.install "gofzf"
