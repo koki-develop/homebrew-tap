@@ -5,20 +5,20 @@
 class HelloCli < Formula
   desc ""
   homepage ""
-  version "0.3.0"
+  version "0.4.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/hello-cli/releases/download/v0.3.0/hello-cli_Darwin_arm64.tar.gz"
-      sha256 "c89d69cfa713d740c84bb73900ca987a771bae34ee4099ece4dac9931c74be6a"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/hello-cli/releases/download/v0.4.0/hello-cli_Darwin_x86_64.tar.gz"
+      sha256 "4bc484c1e6593bf995e161342e0a60a545c1c2f48a1339a382fcc76c45418f1c"
 
       def install
         bin.install "hello-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/hello-cli/releases/download/v0.3.0/hello-cli_Darwin_x86_64.tar.gz"
-      sha256 "e58bc73da3615884a7803341a90a5690c1cd9212b6be60a03d17621a89d7121b"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/hello-cli/releases/download/v0.4.0/hello-cli_Darwin_arm64.tar.gz"
+      sha256 "0a8e99b6f4d0e10a4117f3a2cda43aba18d46e2b2c01350370623212a650c1cb"
 
       def install
         bin.install "hello-cli"
@@ -27,17 +27,17 @@ class HelloCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/hello-cli/releases/download/v0.3.0/hello-cli_Linux_x86_64.tar.gz"
-      sha256 "c4e2087c845bce4750585cb1479e2b9432d032ef3268415ad1f7f5b99841f9da"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/hello-cli/releases/download/v0.4.0/hello-cli_Linux_arm64.tar.gz"
+      sha256 "889a6593accb9edc3bbb2bb319658140670f83baed94a71c811f212c630a4f2e"
 
       def install
         bin.install "hello-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/hello-cli/releases/download/v0.3.0/hello-cli_Linux_arm64.tar.gz"
-      sha256 "98f7be0419c9c43159c4d685d1c09b08e5cec3b58593da267c8396ce8ff7211d"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/hello-cli/releases/download/v0.4.0/hello-cli_Linux_x86_64.tar.gz"
+      sha256 "b6a39d83dca76ac39edde32e9ad9da4603654c0ae1c01699cdaad83ad1be1860"
 
       def install
         bin.install "hello-cli"
