@@ -5,20 +5,20 @@
 class Askai < Formula
   desc ""
   homepage ""
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/askai/releases/download/v0.2.0/askai_Darwin_x86_64.tar.gz"
-      sha256 "aaf20117b7fe82668dc90118be78a0cee0d5dfe0a77b2b08cf00952c1f5ce826"
+      url "https://github.com/koki-develop/askai/releases/download/v0.3.0/askai_Darwin_x86_64.tar.gz"
+      sha256 "cb1da589210de749cc3fa9a1d61fa94a819ee1e4893b72889b9c69b15e96569f"
 
       def install
         bin.install "askai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/askai/releases/download/v0.2.0/askai_Darwin_arm64.tar.gz"
-      sha256 "6c119919d52545a2a939877a1bb6c341bdc7f48e978c8c2cf4199c42d61d5941"
+      url "https://github.com/koki-develop/askai/releases/download/v0.3.0/askai_Darwin_arm64.tar.gz"
+      sha256 "60bb0e572e8c70d40e5225a448ea8fc40b02441cafbac36a86a2d9caf84b1b99"
 
       def install
         bin.install "askai"
@@ -27,17 +27,17 @@ class Askai < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/askai/releases/download/v0.2.0/askai_Linux_arm64.tar.gz"
-      sha256 "15fa626b5200678e3a548b462b14a02f5c6e3a9b4fc95b6572b058432e5324e9"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/askai/releases/download/v0.3.0/askai_Linux_x86_64.tar.gz"
+      sha256 "1ab33217fa38486c6a49ac1bae21ff8b035cf60e9dc2f459ba4650b9ac2b9eb9"
 
       def install
         bin.install "askai"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/askai/releases/download/v0.2.0/askai_Linux_x86_64.tar.gz"
-      sha256 "2cb8343d172a98bddaa15335cef2368a0b8bfd26d1244f1c184a3828541f816a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/askai/releases/download/v0.3.0/askai_Linux_arm64.tar.gz"
+      sha256 "d513397498588d77e1f406a2f4dbb2133f825d1b452515b3a69ac07f1f5eb6da"
 
       def install
         bin.install "askai"
