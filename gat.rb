@@ -5,20 +5,20 @@
 class Gat < Formula
   desc ""
   homepage ""
-  version "0.14.0"
+  version "0.15.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gat/releases/download/v0.14.0/gat_Darwin_x86_64.tar.gz"
-      sha256 "5f4b1ba22c66d5fc94b6fc03a60d3251996374e19731bf7b3dfc6649113f7799"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/gat/releases/download/v0.15.0/gat_Darwin_arm64.tar.gz"
+      sha256 "4233a075f096947cbd572836b8d149d08d422405a75490f108f8eb2f7112be3d"
 
       def install
         bin.install "gat"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gat/releases/download/v0.14.0/gat_Darwin_arm64.tar.gz"
-      sha256 "5c3a58f933333b870cf90c72e29f27155671ed9b9dbf1db13f7c523a6dacfbee"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/gat/releases/download/v0.15.0/gat_Darwin_x86_64.tar.gz"
+      sha256 "9381bce0cc98407b085c682d38964459db2048b7b4c52d8d4ee6e01060c980a8"
 
       def install
         bin.install "gat"
@@ -27,17 +27,17 @@ class Gat < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/gat/releases/download/v0.14.0/gat_Linux_arm64.tar.gz"
-      sha256 "522e4dcbc5e2e4d0ca8f5697b4ac6d1b2f5c9a30b22c79402be489c4becda44e"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/gat/releases/download/v0.15.0/gat_Linux_x86_64.tar.gz"
+      sha256 "341ce3295c1d377c466e62be45eb58978b6eff52c29de45e9d28a0fade70f36a"
 
       def install
         bin.install "gat"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gat/releases/download/v0.14.0/gat_Linux_x86_64.tar.gz"
-      sha256 "931beb860394a4eb0e73b6e74f5fad53e97f42a11835cdb4be5771d40b61dd48"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/gat/releases/download/v0.15.0/gat_Linux_arm64.tar.gz"
+      sha256 "197412319721b71d5ba34d4fe1652cd53105c334fc2abd1269c1ac721bbfaaf6"
 
       def install
         bin.install "gat"
