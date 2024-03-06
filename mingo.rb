@@ -5,20 +5,20 @@
 class Mingo < Formula
   desc ""
   homepage ""
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.1.1/mingo_Darwin_arm64.tar.gz"
-      sha256 "01ac40d959f79ee791ac16f9cba47db59fe026f2a719ff7987e8a5d152f6f17d"
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.0/mingo_Darwin_arm64.tar.gz"
+      sha256 "5878c5dd2bddf1546810e8cfcda1f7f1c0e48517eb5640456e8ad598678db7b3"
 
       def install
         bin.install "mingo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.1.1/mingo_Darwin_x86_64.tar.gz"
-      sha256 "40ce82330749c643bebb45db0c4a2775cc8b3aca0e41865fc8be54044f1f89fd"
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.0/mingo_Darwin_x86_64.tar.gz"
+      sha256 "a59509432361aafb55bdb2844a6977998521ea176485ff8106d067fb0f1f753e"
 
       def install
         bin.install "mingo"
@@ -28,16 +28,16 @@ class Mingo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.1.1/mingo_Linux_arm64.tar.gz"
-      sha256 "64d2fedcd5f2166bb324455e0120bedcfca62e89fadfb5e589555133c7d1ba84"
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.0/mingo_Linux_arm64.tar.gz"
+      sha256 "ba6b820ae52c60bf5af81ef17d90a6c8aa6f93a35709f2afe9cdf4771fd6944e"
 
       def install
         bin.install "mingo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.1.1/mingo_Linux_x86_64.tar.gz"
-      sha256 "0ae3baf51e308fe6c1a5c1199c0263f0fa192fe15f4d5c22e54785e84f71ee15"
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.0/mingo_Linux_x86_64.tar.gz"
+      sha256 "3fd9b52ac2e5351cf29ab0e5a4fdcc2744da6c77e861709a9fa7ea116763c76f"
 
       def install
         bin.install "mingo"
