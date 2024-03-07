@@ -5,20 +5,20 @@
 class Mingo < Formula
   desc ""
   homepage ""
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.2.0/mingo_Darwin_arm64.tar.gz"
-      sha256 "5878c5dd2bddf1546810e8cfcda1f7f1c0e48517eb5640456e8ad598678db7b3"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.1/mingo_Darwin_x86_64.tar.gz"
+      sha256 "8d48ab3a0737fa0b218a414a018ff89fe2f840455d6cb5cd0b92f901b5f98c76"
 
       def install
         bin.install "mingo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.2.0/mingo_Darwin_x86_64.tar.gz"
-      sha256 "a59509432361aafb55bdb2844a6977998521ea176485ff8106d067fb0f1f753e"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.1/mingo_Darwin_arm64.tar.gz"
+      sha256 "6b59163aef9591d7d580f8c53f5cafe00b38607b86fc829fb398493748448801"
 
       def install
         bin.install "mingo"
@@ -27,17 +27,17 @@ class Mingo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.2.0/mingo_Linux_arm64.tar.gz"
-      sha256 "ba6b820ae52c60bf5af81ef17d90a6c8aa6f93a35709f2afe9cdf4771fd6944e"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.1/mingo_Linux_x86_64.tar.gz"
+      sha256 "bc7f19155d687569a686316c4e7f2e619fb0d60cc7d86a2c59afe84446a52da1"
 
       def install
         bin.install "mingo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.2.0/mingo_Linux_x86_64.tar.gz"
-      sha256 "3fd9b52ac2e5351cf29ab0e5a4fdcc2744da6c77e861709a9fa7ea116763c76f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.1/mingo_Linux_arm64.tar.gz"
+      sha256 "67d14f6de11209f3c943a1d7cbc5f9904158e9dfe8eb42252ce351fd815bf26c"
 
       def install
         bin.install "mingo"
