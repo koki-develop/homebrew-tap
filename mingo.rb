@@ -5,20 +5,20 @@
 class Mingo < Formula
   desc ""
   homepage ""
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.2.1/mingo_Darwin_x86_64.tar.gz"
-      sha256 "8d48ab3a0737fa0b218a414a018ff89fe2f840455d6cb5cd0b92f901b5f98c76"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.2/mingo_Darwin_arm64.tar.gz"
+      sha256 "7846e65c9c3da996cd65c5a1491cd7129c57c535ddf88a3a0a54a499199e7a56"
 
       def install
         bin.install "mingo"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.2.1/mingo_Darwin_arm64.tar.gz"
-      sha256 "6b59163aef9591d7d580f8c53f5cafe00b38607b86fc829fb398493748448801"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.2/mingo_Darwin_x86_64.tar.gz"
+      sha256 "01a8438bbb640a797de11b199609b339259e0e4261686d9132e33ec7b3452313"
 
       def install
         bin.install "mingo"
@@ -28,16 +28,16 @@ class Mingo < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.2.1/mingo_Linux_x86_64.tar.gz"
-      sha256 "bc7f19155d687569a686316c4e7f2e619fb0d60cc7d86a2c59afe84446a52da1"
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.2/mingo_Linux_x86_64.tar.gz"
+      sha256 "72f885fe17021c8662627b0e22bd35a45d6600021161896bea942508338727ab"
 
       def install
         bin.install "mingo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/mingo/releases/download/v0.2.1/mingo_Linux_arm64.tar.gz"
-      sha256 "67d14f6de11209f3c943a1d7cbc5f9904158e9dfe8eb42252ce351fd815bf26c"
+      url "https://github.com/koki-develop/mingo/releases/download/v0.2.2/mingo_Linux_arm64.tar.gz"
+      sha256 "d1a4639fde9552fc05ff775cff5b5e7010c22448e7bb8a78d6088c6d44d756d6"
 
       def install
         bin.install "mingo"
