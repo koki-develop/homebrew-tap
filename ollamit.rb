@@ -5,20 +5,20 @@
 class Ollamit < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/koki-develop/ollamit/releases/download/v0.1.0/ollamit_Darwin_x86_64.tar.gz"
-      sha256 "eb4a0e27d9e457b9d7e86099ffaf0da0afbbac89ec46b1789ece3c058c137af2"
+      url "https://github.com/koki-develop/ollamit/releases/download/v0.1.1/ollamit_Darwin_x86_64.tar.gz"
+      sha256 "4e4ab09aa0de4a62488126d8b5a543267cbd05cb3fc9c8537e9558cfeedb4022"
 
       def install
         bin.install "ollamit"
       end
     end
     on_arm do
-      url "https://github.com/koki-develop/ollamit/releases/download/v0.1.0/ollamit_Darwin_arm64.tar.gz"
-      sha256 "291840ddf86aa0e683a2b15749c6ff13a2f81e109fa24359b54c7f660698450b"
+      url "https://github.com/koki-develop/ollamit/releases/download/v0.1.1/ollamit_Darwin_arm64.tar.gz"
+      sha256 "36ccd3afe1fb64bc825187199e798b557ce611008ca1d1e0bb4ab89d0b2a8f62"
 
       def install
         bin.install "ollamit"
@@ -29,8 +29,8 @@ class Ollamit < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/koki-develop/ollamit/releases/download/v0.1.0/ollamit_Linux_x86_64.tar.gz"
-        sha256 "6f74fe3f68c93451e1fe99724b971b878286c19eb72981ba343f97a0cd73b169"
+        url "https://github.com/koki-develop/ollamit/releases/download/v0.1.1/ollamit_Linux_x86_64.tar.gz"
+        sha256 "a86752df467b2d78e37a1180c79bdfa396904859d6bcfce84e9169a67c85db11"
 
         def install
           bin.install "ollamit"
@@ -39,8 +39,8 @@ class Ollamit < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/koki-develop/ollamit/releases/download/v0.1.0/ollamit_Linux_arm64.tar.gz"
-        sha256 "6504c214e9970936f65ceb1b29b903a6dfd7acfb54206e15a66a1a7de314bdbd"
+        url "https://github.com/koki-develop/ollamit/releases/download/v0.1.1/ollamit_Linux_arm64.tar.gz"
+        sha256 "e3d31ab157bbb016844a4ef69e62e515f5a2ccfcdcb2ea95fac3d81970f842dc"
 
         def install
           bin.install "ollamit"
