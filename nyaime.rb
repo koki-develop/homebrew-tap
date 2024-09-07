@@ -1,7 +1,7 @@
 cask "nyaime" do
-  version "0.0.1"
+  version "0.0.2"
   url "https://github.com/koki-develop/NyaIME/releases/download/v#{version}/NyaIME.pkg"
-  sha256 "28a27f96b21e58a2e5f14ad8b1ef501e8ca925e8c7703a365cbad130e02bd189"
+  sha256 "6c6a0bcd470503069f14a53bf2d64660fd04ad069761eafc925e293fc3c6549a"
 
   name "NyaIME"
   desc ""
