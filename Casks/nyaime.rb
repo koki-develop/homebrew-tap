@@ -1,10 +1,10 @@
 cask "nyaime" do
-  version "0.0.3"
+  version "0.0.6"
   url "https://github.com/koki-develop/NyaIME/releases/download/v#{version}/NyaIME.pkg"
-  sha256 "a1f522d0f8d9985fa988e32c3fa4e84281295f402124201e2ee06df56cca8cfb"
+  sha256 "963a78c68bbfb6bfef5dcae272ba713c302c8c0028129be70e089bc0401eac9a"
 
   name "NyaIME"
-  desc ""
+  desc "猫の IME for Mac"
   homepage "https://github.com/koki-develop/NyaIME"
 
   pkg "NyaIME.pkg"
