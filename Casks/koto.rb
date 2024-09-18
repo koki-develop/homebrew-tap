@@ -1,8 +1,8 @@
 cask "koto" do
-  version "0.0.5"
+  version "0.0.6"
   url "https://github.com/koki-develop/Koto/releases/download/v#{version}/Koto.pkg"
-  sha256 "85309f3eda95cf0bf5bf377d27b5af50c08243814ac8289f24f9baba7e079a85"
-  depends_on macos: ">= :sonoma"
+  sha256 "6c7af1e2d3062b2de69f0067c23da539c1ae6091848c289668c7724f4427408d"
+  depends_on macos: ">= :ventura"
 
   name "Koto"
   desc "IME for Mac"
