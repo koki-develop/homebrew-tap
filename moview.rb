@@ -5,22 +5,22 @@
 class Moview < Formula
   desc ""
   homepage ""
-  version "0.1.1"
+  version "0.1.2"
 
   depends_on "ffmpeg"
 
   on_macos do
     on_intel do
-      url "https://github.com/koki-develop/moview/releases/download/v0.1.1/moview_Darwin_x86_64.tar.gz"
-      sha256 "ed4926a46d67dd7eb3a7ee6bffbdc826b916b7d1e36216a141477d1c025d4bb3"
+      url "https://github.com/koki-develop/moview/releases/download/v0.1.2/moview_Darwin_x86_64.tar.gz"
+      sha256 "538c207674d2c2553425fe446cc262cf366a1da31d29be4986b87ef5c197b9d7"
 
       def install
         bin.install "moview"
       end
     end
     on_arm do
-      url "https://github.com/koki-develop/moview/releases/download/v0.1.1/moview_Darwin_arm64.tar.gz"
-      sha256 "67dbbe197089cdc6f76e89a1bb1b49eef21a4a45e034d262862aaa3e9a130fef"
+      url "https://github.com/koki-develop/moview/releases/download/v0.1.2/moview_Darwin_arm64.tar.gz"
+      sha256 "538b7c18a1cf631284fd5a3af5c7c25bb0ad5ec9725ea5b4e8ac8556ceaea5ba"
 
       def install
         bin.install "moview"
@@ -31,8 +31,8 @@ class Moview < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/koki-develop/moview/releases/download/v0.1.1/moview_Linux_x86_64.tar.gz"
-        sha256 "572b60d48b16985175f304467dc4691488da6cf95ecca1aea0a1e03235e839da"
+        url "https://github.com/koki-develop/moview/releases/download/v0.1.2/moview_Linux_x86_64.tar.gz"
+        sha256 "20191fc7ccd78d086a6405c531f6f73c03b66a7ec89dbe0b8b6eafa4dea72cf1"
 
         def install
           bin.install "moview"
@@ -41,8 +41,8 @@ class Moview < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/koki-develop/moview/releases/download/v0.1.1/moview_Linux_arm64.tar.gz"
-        sha256 "a20134df4be0d3e3bb1583fd1bdf45963ded7674a58dbb5a067395789a6e14d7"
+        url "https://github.com/koki-develop/moview/releases/download/v0.1.2/moview_Linux_arm64.tar.gz"
+        sha256 "49bc791a5523da7ea9e789b40f6fd660113bd416e536398147e043017c6b006b"
 
         def install
           bin.install "moview"
