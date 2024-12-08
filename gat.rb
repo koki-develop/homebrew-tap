@@ -5,20 +5,20 @@
 class Gat < Formula
   desc ""
   homepage ""
-  version "0.19.1"
+  version "0.19.3"
 
   on_macos do
     on_intel do
-      url "https://github.com/koki-develop/gat/releases/download/v0.19.1/gat_Darwin_x86_64.tar.gz"
-      sha256 "1291a9f38fb0765b14da37b0f3a75985713737c0babebb611b8c05d1fe0a8466"
+      url "https://github.com/koki-develop/gat/releases/download/v0.19.3/gat_Darwin_x86_64.tar.gz"
+      sha256 "0068463b7d6e83a3f43bfa577f29c61c1e05f88b6495ccbf97c56cd2f670cc24"
 
       def install
         bin.install "gat"
       end
     end
     on_arm do
-      url "https://github.com/koki-develop/gat/releases/download/v0.19.1/gat_Darwin_arm64.tar.gz"
-      sha256 "5f82b653d9b59372073b461f98d2866e1559e07b04acc9c860eedd4cba9ec0a7"
+      url "https://github.com/koki-develop/gat/releases/download/v0.19.3/gat_Darwin_arm64.tar.gz"
+      sha256 "b6299e4feef42b6fc241b96da3a1e52d882ca48f993f1dff7991326533173c1a"
 
       def install
         bin.install "gat"
@@ -29,8 +29,8 @@ class Gat < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/koki-develop/gat/releases/download/v0.19.1/gat_Linux_x86_64.tar.gz"
-        sha256 "c608a4be227487dd56d8f43b1c3b2da3a0feeb0491d4822e449c301dfe4f9ff4"
+        url "https://github.com/koki-develop/gat/releases/download/v0.19.3/gat_Linux_x86_64.tar.gz"
+        sha256 "563a359dc20e0deb1d4a27c75da268853516cc33f120fcf243a7ca9637d9215e"
 
         def install
           bin.install "gat"
@@ -39,8 +39,8 @@ class Gat < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/koki-develop/gat/releases/download/v0.19.1/gat_Linux_arm64.tar.gz"
-        sha256 "fd4297031b71b90bcfaa0b02dfd12e60eec1c334697f4d0de53ba4067f38b3ef"
+        url "https://github.com/koki-develop/gat/releases/download/v0.19.3/gat_Linux_arm64.tar.gz"
+        sha256 "aa964a61f000ac19790408fdb6638a012a1f788b6371815221c5ee338c1a7088"
 
         def install
           bin.install "gat"
