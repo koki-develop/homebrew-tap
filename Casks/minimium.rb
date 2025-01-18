@@ -1,5 +1,5 @@
 cask "minimium" do
-  version "0.0.7"
+  version "0.0.11"
 
   name "Minimium"
   desc "Minimium is a browser that is minimalistic."
@@ -7,7 +7,7 @@ cask "minimium" do
   app "Minimium.app"
 
   url "https://github.com/koki-develop/minimium/releases/download/v#{version}/Minimium-#{version}.dmg"
-  sha256 ""9115237ad29747b19ecfe5162d68ee0e3bc4eeb10abf66b04ff5cfa3876fec3d""
+  sha256 ""ba877f1ee3441d351df9bf138726a530d7ab349b97e6368598e1e70534541eec""
 
   uninstall pkgutil: "me.koki.minimium"
 end
