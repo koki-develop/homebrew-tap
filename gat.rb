@@ -5,20 +5,20 @@
 class Gat < Formula
   desc ""
   homepage ""
-  version "0.21.0"
+  version "0.21.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gat/releases/download/v0.21.0/gat_Darwin_x86_64.tar.gz"
-      sha256 "a226aa600c9935d70c630de92a39d1581c35b3556f1e3572c30d7dba7c7764d0"
+      url "https://github.com/koki-develop/gat/releases/download/v0.21.1/gat_Darwin_x86_64.tar.gz"
+      sha256 "5d9d5d65b631508a8617942985481f8d319be81a39c61e90de75b33b566f40d3"
 
       def install
         bin.install "gat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gat/releases/download/v0.21.0/gat_Darwin_arm64.tar.gz"
-      sha256 "351a6c795443dc03eb62b3ff901f95945e2aa57e05ac54323a4b6f247aa2c6ea"
+      url "https://github.com/koki-develop/gat/releases/download/v0.21.1/gat_Darwin_arm64.tar.gz"
+      sha256 "672edd4d13a39824a7f08e828316119a5c7c4c8f521b73ff19ec4fbdde3378b5"
 
       def install
         bin.install "gat"
@@ -29,8 +29,8 @@ class Gat < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/koki-develop/gat/releases/download/v0.21.0/gat_Linux_x86_64.tar.gz"
-        sha256 "5737cec9e414742b45541d28f7550ead383be589bfe1fcdd3c20cd6ef3103abd"
+        url "https://github.com/koki-develop/gat/releases/download/v0.21.1/gat_Linux_x86_64.tar.gz"
+        sha256 "4535d2b8d51ab7343892e487b4b354edbc44b274ba2f52b7fe913384a2e061a0"
 
         def install
           bin.install "gat"
@@ -39,8 +39,8 @@ class Gat < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/koki-develop/gat/releases/download/v0.21.0/gat_Linux_arm64.tar.gz"
-        sha256 "2e4dda8a493cca680fc5cb7c1abe293e6912bee7a3462cb1c6a01aac21a08b5b"
+        url "https://github.com/koki-develop/gat/releases/download/v0.21.1/gat_Linux_arm64.tar.gz"
+        sha256 "aa0f37c88ce8d301bb3adb7d92a1d24f52424afacb4ce5bea97e2691431bfcc4"
 
         def install
           bin.install "gat"
