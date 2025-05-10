@@ -5,20 +5,20 @@
 class DockerTags < Formula
   desc ""
   homepage ""
-  version "0.9.0"
+  version "0.10.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/docker-tags/releases/download/v0.9.0/docker-tags_Darwin_arm64.tar.gz"
-      sha256 "ffd77b363473fccc22970c35ae3dc8450d99237112b0a193aef6f64cfb9bdcfe"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/docker-tags/releases/download/v0.10.0/docker-tags_Darwin_x86_64.tar.gz"
+      sha256 "54df68430d1e6883ba25c51c8ad8a45dacdc30391a316888fd928fcd9a2ba261"
 
       def install
         bin.install "docker-tags"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/docker-tags/releases/download/v0.9.0/docker-tags_Darwin_x86_64.tar.gz"
-      sha256 "925c1679bf6d75f6fc62459da709f87b28e72fe1f5dd62fa2ca58cd0b1fe8d4b"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/docker-tags/releases/download/v0.10.0/docker-tags_Darwin_arm64.tar.gz"
+      sha256 "b9686f0579718856b955a1616f86af9e7cca2aec91e341717b5073f32dc2c6d2"
 
       def install
         bin.install "docker-tags"
@@ -27,18 +27,16 @@ class DockerTags < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/docker-tags/releases/download/v0.9.0/docker-tags_Linux_x86_64.tar.gz"
-      sha256 "c3de72d6d19838e99fb7939a7111189dbf4dba1711db22efd57cf241abf6eeea"
-
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/docker-tags/releases/download/v0.10.0/docker-tags_Linux_x86_64.tar.gz"
+      sha256 "b7acba46efd31d87bbf0526335e379afb5a4e9bbc019944be3870f02e32d8f8a"
       def install
         bin.install "docker-tags"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/docker-tags/releases/download/v0.9.0/docker-tags_Linux_arm64.tar.gz"
-      sha256 "645982c385492a11597e45bceeba885360c54648a6c0c539a781b6fcb99e321b"
-
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/docker-tags/releases/download/v0.10.0/docker-tags_Linux_arm64.tar.gz"
+      sha256 "82d23b96e651345cfbc08a564fbc7e9eb1da02d5c694fdf5d7cba65eff36e297"
       def install
         bin.install "docker-tags"
       end
