@@ -5,20 +5,20 @@
 class Slp < Formula
   desc ""
   homepage ""
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/slp/releases/download/v0.3.2/slp_Darwin_arm64.tar.gz"
-      sha256 "88534c33435f167c40f04ac17ed9f7a700594e5e5ac44574678b34c8ab089c90"
+    if Hardware::CPU.intel?
+      url "https://github.com/koki-develop/slp/releases/download/v0.3.3/slp_Darwin_x86_64.tar.gz"
+      sha256 "1e8392a17c600238b529d4fe99327bc770077e155bf5370143c2a8943748d242"
 
       def install
         bin.install "slp"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/slp/releases/download/v0.3.2/slp_Darwin_x86_64.tar.gz"
-      sha256 "0e7e0fad4a2c8aa5513ae0d8a5ff655eeb7827dd81e819548d860da63c349e1e"
+    if Hardware::CPU.arm?
+      url "https://github.com/koki-develop/slp/releases/download/v0.3.3/slp_Darwin_arm64.tar.gz"
+      sha256 "1f6844fffb74f9296adb9c0a65e04bea6e1f59ea5c170f88fdfb2e21a804ebee"
 
       def install
         bin.install "slp"
@@ -27,18 +27,16 @@ class Slp < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/slp/releases/download/v0.3.2/slp_Linux_x86_64.tar.gz"
-      sha256 "6acd08ff4381c0761d46abd9188cca55fc6446faf9eafe5e617335ddae8911ff"
-
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/slp/releases/download/v0.3.3/slp_Linux_x86_64.tar.gz"
+      sha256 "88035235068d821c3559bd7ddaa829a8383b6c1e2ddb8259cef05194b8ef1dc0"
       def install
         bin.install "slp"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/slp/releases/download/v0.3.2/slp_Linux_arm64.tar.gz"
-      sha256 "405ff8b7c36b71f0e8e3f325b68fea346aa7db5e32277952c39ad17b6bc86b66"
-
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/koki-develop/slp/releases/download/v0.3.3/slp_Linux_arm64.tar.gz"
+      sha256 "8b8ddaa0ac7341c633becd98a363d127d459c7e63f089c82fa99d78367ed6cd9"
       def install
         bin.install "slp"
       end
