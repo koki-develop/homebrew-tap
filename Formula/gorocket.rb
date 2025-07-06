@@ -3,25 +3,25 @@
 
 # Gorocket formula
 class Gorocket < Formula
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gorocket/releases/download/v0.0.2/gorocket_v0.0.2_darwin_arm64.tar.gz"
-      sha256 "64a822e2f37084475c8ae9395dc3be7da3d53a1b35ed93885277ecd41105376a"
+      url "https://github.com/koki-develop/gorocket/releases/download/v0.0.3/gorocket_v0.0.3_darwin_arm64.tar.gz"
+      sha256 "5bb35ef1f05d924016b63af27fcb774883d9d305270c5c62076e8208eac181c2"
     else
-      url "https://github.com/koki-develop/gorocket/releases/download/v0.0.2/gorocket_v0.0.2_darwin_amd64.tar.gz"
-      sha256 "d14ed03f9472ead3bf880bbf0017964c9daade7cc4f650a54036fe4acb11894e"
+      url "https://github.com/koki-develop/gorocket/releases/download/v0.0.3/gorocket_v0.0.3_darwin_amd64.tar.gz"
+      sha256 "05dba2ddef91ede814d861c644f287e12a9b87e8a8975ca059c1bce960b5ec8a"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gorocket/releases/download/v0.0.2/gorocket_v0.0.2_linux_arm64.tar.gz"
-      sha256 "82d17714db625c278198e75e08e91648a6c6d1cfee3d9b446d82753ac0013a2f"
+      url "https://github.com/koki-develop/gorocket/releases/download/v0.0.3/gorocket_v0.0.3_linux_arm64.tar.gz"
+      sha256 "a5a233462dcb3a248ccff32d5cdfd446020976ae2b67aead5ad6f24757c49a03"
     else
-      url "https://github.com/koki-develop/gorocket/releases/download/v0.0.2/gorocket_v0.0.2_linux_amd64.tar.gz"
-      sha256 "85870860815982a901e66277c1a2506c4432a105642ac9cf7403d5b56a7981e3"
+      url "https://github.com/koki-develop/gorocket/releases/download/v0.0.3/gorocket_v0.0.3_linux_amd64.tar.gz"
+      sha256 "52f2b5caf594a4f8dea79491e6715a589d97e7708c9ac12177784a083394515c"
     end
   end
 
