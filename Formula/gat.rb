@@ -5,40 +5,52 @@
 class Gat < Formula
   desc ""
   homepage ""
-  version "0.25.1"
+  version "0.25.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gat/releases/download/v0.25.1/gat_Darwin_x86_64.tar.gz"
-      sha256 "9e46bf87cd1680fbeea9d0cebd1c6ecdf38138db60a85a90454f91daf65ba571"
+      url "https://github.com/koki-develop/gat/releases/download/v0.25.2/gat_Darwin_x86_64.tar.gz"
+      sha256 "305866bcc448297190e7a7826114a4cab0d9dbc3b37dcee9631aa0e48bc3c254"
 
       def install
         bin.install "gat"
+        bash_completion.install "completions/gat.bash" => "gat"
+        zsh_completion.install "completions/gat.zsh" => "_gat"
+        fish_completion.install "completions/gat.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gat/releases/download/v0.25.1/gat_Darwin_arm64.tar.gz"
-      sha256 "c86463394a7c7806af08c29d2b8e360a86f0043c43b958529fbed3b08fe7218b"
+      url "https://github.com/koki-develop/gat/releases/download/v0.25.2/gat_Darwin_arm64.tar.gz"
+      sha256 "0aadeb7564438e77107c0c0c37df5c18e36b6b6ac7768d6f6c062a615d4f7113"
 
       def install
         bin.install "gat"
+        bash_completion.install "completions/gat.bash" => "gat"
+        zsh_completion.install "completions/gat.zsh" => "_gat"
+        fish_completion.install "completions/gat.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/gat/releases/download/v0.25.1/gat_Linux_x86_64.tar.gz"
-      sha256 "eb8ffb370b54eea9e4e6b30f75771cbe6de3921a4cbe7fcb2bea22e37ff0d207"
+      url "https://github.com/koki-develop/gat/releases/download/v0.25.2/gat_Linux_x86_64.tar.gz"
+      sha256 "97b519e6e981ff6aec8b422e1568345cfa3f59e3e260bd1c9deb376eebfe7e76"
       def install
         bin.install "gat"
+        bash_completion.install "completions/gat.bash" => "gat"
+        zsh_completion.install "completions/gat.zsh" => "_gat"
+        fish_completion.install "completions/gat.fish"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/gat/releases/download/v0.25.1/gat_Linux_arm64.tar.gz"
-      sha256 "4a02b3efeb59fe27665bf13b341fc48174b155582e615aa587782e7e7f9708cd"
+      url "https://github.com/koki-develop/gat/releases/download/v0.25.2/gat_Linux_arm64.tar.gz"
+      sha256 "3009eb936075911fe8cd69392ea1a2276745627b5e1fcf74e956aeb623f58738"
       def install
         bin.install "gat"
+        bash_completion.install "completions/gat.bash" => "gat"
+        zsh_completion.install "completions/gat.zsh" => "_gat"
+        fish_completion.install "completions/gat.fish"
       end
     end
   end
