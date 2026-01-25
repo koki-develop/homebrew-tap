@@ -2,12 +2,12 @@ cask "politely" do
   name "Politely"
   desc "話すだけで、丁寧な文章に。"
   homepage "https://github.com/koki-develop/politely"
-  version "0.1.2"
+  version "0.2.0"
 
   arch arm: "arm64", intel: "x64"
   url "https://github.com/koki-develop/politely/releases/download/v#{version}/Politely-darwin-#{arch}-#{version}.zip"
-  sha256 arm:   "7c2305471a5952ec4e7ca4c14e86b821655ce5e38f4f734dc1f9b361bb8d34a3",
-         intel: "ff5f64630bde48f7e29317ff7189613409ac394babd00163c2ecf14aaf0b94b2"
+  sha256 arm:   "fafd02939d0e4f1322d9325b4e0dc428274dcbe73119d677b6ca1eec2ce8b184",
+         intel: "7b03b97df0ba1336243a8ab621ef16ba8d5e017a2010efce5ad12645615196ac"
 
   preflight do
     system_command "/usr/bin/codesign",
