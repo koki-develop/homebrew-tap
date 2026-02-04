@@ -1,28 +1,28 @@
 class Merx < Formula
   desc "Run your flowcharts"
   homepage "https://github.com/koki-develop/merx"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     on_intel do
       url "https://github.com/koki-develop/merx/releases/download/v#{version}/merx-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "46f209037432824e2f9ec753ab2da52ae5aa968af4ca6da012c25308a9d6b5da"
+      sha256 "7eff652b7d502338b6516957d1c9387da9d15cf9fada43e4190371c72fa4336a"
     end
     on_arm do
       url "https://github.com/koki-develop/merx/releases/download/v#{version}/merx-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "dc1a8003e7faae017c967ab5f1da2bee1d318bc61bf1ea53e75cf8fc594169b1"
+      sha256 "1633f3252021f49d3ac5e556d4e11d3ac545fd14162ebdebe2ece8e3b6538240"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/koki-develop/merx/releases/download/v#{version}/merx-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1b65655034d7ac085b2afa5f5e5e983330b7d244d8d60bffe1a4df6cab3052ae"
+      sha256 "053e11aa5ce53e2889844d7f9d2edf2222ffda1a3c1f2fd2924782ed389b44c2"
     end
     on_arm do
       url "https://github.com/koki-develop/merx/releases/download/v#{version}/merx-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "820004aee0d207431b29970c140589a0dddd7245d70e3aecc7e0284da43e62dc"
+      sha256 "79811b90bc77a128c40904788c876d0d5bd4913076d822aa9204a799ed957863"
     end
   end
 
