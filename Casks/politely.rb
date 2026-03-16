@@ -2,12 +2,12 @@ cask "politely" do
   name "Politely"
   desc "話すだけで、丁寧な文章に。"
   homepage "https://github.com/koki-develop/politely"
-  version "0.3.0"
+  version "0.3.1"
 
   arch arm: "arm64", intel: "x64"
   url "https://github.com/koki-develop/politely/releases/download/v#{version}/Politely-darwin-#{arch}-#{version}.zip"
-  sha256 arm:   "f1873cd9bf3e213f16306933ddfddc44aaf8ad6c0a0b0f2479fccd3e3a4e471d",
-         intel: "9610f5025033069b4b0304a152d0d7d38a2e4e5169bfedb515738779da86ce58"
+  sha256 arm:   "35b40d930443b7496e95fdc93bbca5d2bed6b1ac3fa19b020917639586969ee5",
+         intel: "9d021a6977f6aa1463c01a9689ff875f454f401c5c50d5df9d0430102024c62b"
 
   preflight do
     # ad-hoc 署名で designated requirement を identifier のみに設定
