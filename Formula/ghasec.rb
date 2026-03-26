@@ -1,28 +1,28 @@
 class Ghasec < Formula
   desc ""
   homepage "https://github.com/koki-develop/ghasec"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     on_intel do
       url "https://github.com/koki-develop/ghasec/releases/download/v#{version}/ghasec_Darwin_x86_64.tar.gz"
-      sha256 "775dde8c84a189e6af1a73f283ab489e5f376e98fd4ab7642e8a700519d214b1"
+      sha256 "0e75741f8937d640fdede3304ebf50c3f2189759d97851ad87d162f33d4fcd93"
     end
     on_arm do
       url "https://github.com/koki-develop/ghasec/releases/download/v#{version}/ghasec_Darwin_arm64.tar.gz"
-      sha256 "46070a620330fb6be1536b62a2d2a9f6078da785f4a9c49d83b66241eca0f542"
+      sha256 "a81d489a49c67258d81497906ec9725cf80ddf9eedd60532dd115753bb31d3dd"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/koki-develop/ghasec/releases/download/v#{version}/ghasec_Linux_x86_64.tar.gz"
-      sha256 "46495fc7d9d1d1441fbcf85d80c81d7f589f34f02c4653463241d785129b2dc6"
+      sha256 "d894f2659a3eac5896e80bae6867fee05ff4aa1e1b864ca214752b7022a52754"
     end
     on_arm do
       url "https://github.com/koki-develop/ghasec/releases/download/v#{version}/ghasec_Linux_arm64.tar.gz"
-      sha256 "6e414e276e106dd4bdaa4b79325e04962cfa5a38885bbc07e59511fa276adfae"
+      sha256 "fedb33ddef8ecc88af1f4fcf9273c05ceef0aaa184bbbe77fd5500f19d3436f8"
     end
   end
 
