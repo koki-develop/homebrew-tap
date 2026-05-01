@@ -5,14 +5,14 @@
 class Clive < Formula
   desc "Automates terminal operations and lets you view them live via a browser"
   homepage "https://github.com/koki-develop/clive"
-  version "0.12.16"
+  version "0.12.17"
 
   depends_on "ttyd"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/clive/releases/download/v0.12.16/clive_Darwin_x86_64.tar.gz"
-      sha256 "8911f809fe0b9eaf2c62d5a5a752315a4d5367d110bfd325c1eaf1be81c91a99"
+      url "https://github.com/koki-develop/clive/releases/download/v0.12.17/clive_Darwin_x86_64.tar.gz"
+      sha256 "eb5485603828810f9601ed384c4b5171a210a00063a936c28c3eebe7798596a2"
 
       def install
         bin.install "clive"
@@ -22,8 +22,8 @@ class Clive < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/clive/releases/download/v0.12.16/clive_Darwin_arm64.tar.gz"
-      sha256 "58cd0f4c795e198c30bbc49a36007c8eebaf71a163546ef140d2d3f9820a960a"
+      url "https://github.com/koki-develop/clive/releases/download/v0.12.17/clive_Darwin_arm64.tar.gz"
+      sha256 "e227c0f0a7bd572afe2e866d53d2085d82a6dc7b0c56f5e8975462234dcdb117"
 
       def install
         bin.install "clive"
@@ -36,8 +36,8 @@ class Clive < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/clive/releases/download/v0.12.16/clive_Linux_x86_64.tar.gz"
-      sha256 "547351f8a799e9d92e2227058a87948c810677c697623b273f5eeac32e2d47de"
+      url "https://github.com/koki-develop/clive/releases/download/v0.12.17/clive_Linux_x86_64.tar.gz"
+      sha256 "8aa75d745da3936a8fa416a48a7624a3f07c3b46d01598c5d5bc3fa9f0a39987"
       def install
         bin.install "clive"
         bash_completion.install "completions/clive.bash" => "clive"
@@ -46,8 +46,8 @@ class Clive < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/clive/releases/download/v0.12.16/clive_Linux_arm64.tar.gz"
-      sha256 "4165df1c44b7d227f386817f387715e97cfea4903205f67db664b689643a53f4"
+      url "https://github.com/koki-develop/clive/releases/download/v0.12.17/clive_Linux_arm64.tar.gz"
+      sha256 "195bcf947fe0d02201455321947ce4f5cbc9ecf6060c2f67f8048823125ed14d"
       def install
         bin.install "clive"
         bash_completion.install "completions/clive.bash" => "clive"
