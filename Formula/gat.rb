@@ -5,12 +5,12 @@
 class Gat < Formula
   desc ""
   homepage ""
-  version "0.28.0"
+  version "0.29.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koki-develop/gat/releases/download/v0.28.0/gat_Darwin_x86_64.tar.gz"
-      sha256 "806b341de74b507154ae470093c93ec1bf98881cff18464fe5eef358f75ef3ee"
+      url "https://github.com/koki-develop/gat/releases/download/v0.29.0/gat_Darwin_x86_64.tar.gz"
+      sha256 "2d40c3351b16474615d0c85d59448b4dfe4c94effcc930d1bf4152a4109dff3c"
 
       def install
         bin.install "gat"
@@ -20,8 +20,8 @@ class Gat < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koki-develop/gat/releases/download/v0.28.0/gat_Darwin_arm64.tar.gz"
-      sha256 "2ae2603c15f7e9f411aa52e630ecef8c3c5af228ac82940ef8985c10d7e212c5"
+      url "https://github.com/koki-develop/gat/releases/download/v0.29.0/gat_Darwin_arm64.tar.gz"
+      sha256 "bf4f23154a4ae16883555719d1652f956543f83a6405d757c66852d4d02c7a8a"
 
       def install
         bin.install "gat"
@@ -34,8 +34,8 @@ class Gat < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/gat/releases/download/v0.28.0/gat_Linux_x86_64.tar.gz"
-      sha256 "159210d0e4c14bcb95966008fe55fadf16fc8d3a213927f72016b96b4d5827fa"
+      url "https://github.com/koki-develop/gat/releases/download/v0.29.0/gat_Linux_x86_64.tar.gz"
+      sha256 "f208b8147a08a5cb89e4129b0681aa0dfecb8765cb22d52d7c5e459f52ee9021"
       def install
         bin.install "gat"
         bash_completion.install "completions/gat.bash" => "gat"
@@ -44,8 +44,8 @@ class Gat < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/koki-develop/gat/releases/download/v0.28.0/gat_Linux_arm64.tar.gz"
-      sha256 "a0944ddac481d75023d64d53a6f0ba960973698d9453ca3b09f9da9d7aa6338c"
+      url "https://github.com/koki-develop/gat/releases/download/v0.29.0/gat_Linux_arm64.tar.gz"
+      sha256 "adda1d1aeb94e635a6cf180b16b918e44b24ca4085cda8dc20b28f4582c088d2"
       def install
         bin.install "gat"
         bash_completion.install "completions/gat.bash" => "gat"
