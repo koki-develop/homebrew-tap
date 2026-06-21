@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "cork" do
-  version "0.13.1"
-  sha256 "35f6b34c5a81e0d9bc4b903f5c783994ccf842a82360a12ed89e8f9eeab82176"
+  version "0.14.0"
+  sha256 "5ebbf9ba9bc46ea1cbd37651b46aadca07a952ed00b8f4c818a7245b13a0459e"
 
   url "https://github.com/koki-develop/Cork/releases/download/v#{version}/Cork_#{version}_aarch64.dmg"
   name "Cork"
