@@ -2,13 +2,15 @@
 # frozen_string_literal: true
 
 cask "cork" do
-  version "0.15.0"
-  sha256 "2c6b900b00de2c37b6a4bbc2704c1d5bd2901887d3c6ef71e2f9765f505a7764"
+  version "0.16.1"
+  sha256 "a7c35002408ba74b967fd2a4176f5b8630cbf1abb6fb3c08eee4cacc4c256bc3"
 
   url "https://github.com/koki-develop/Cork/releases/download/v#{version}/Cork_#{version}_aarch64.dmg"
   name "Cork"
   desc "Kanban board for local Markdown files"
   homepage "https://github.com/koki-develop/Cork"
+
+  auto_updates true
 
   depends_on arch: :arm64
 
