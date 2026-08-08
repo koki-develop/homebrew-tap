@@ -1,7 +1,7 @@
 cask "koto" do
-  version "0.6.0"
+  version "0.7.0"
   url "https://github.com/koki-develop/Koto/releases/download/v#{version}/Koto.pkg"
-  sha256 "5326270438916341fcffd7e66c51159d4ad378e2a0f73f7f21e385a1b502a627"
+  sha256 "c26ee9802c0f6f18a2fad2676ab7cfffa98b39cb6790dab8ff0ff4d87aa31945"
   depends_on macos: :ventura
 
   name "Koto"
