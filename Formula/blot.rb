@@ -1,28 +1,28 @@
 class Blot < Formula
   desc "Secret masking filter"
   homepage "https://github.com/koki-develop/blot"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_intel do
       url "https://github.com/koki-develop/blot/releases/download/v#{version}/blot_Darwin_x86_64.tar.gz"
-      sha256 "bfecabb49c6490dd9dd2c9dff213913dd676a52f409d8179de559aa5a0861b47"
+      sha256 "abc945e9c04c5f3beb398648d0c69044c75c058d9bae9d4509359beca25379ae"
     end
     on_arm do
       url "https://github.com/koki-develop/blot/releases/download/v#{version}/blot_Darwin_arm64.tar.gz"
-      sha256 "686308c65459c74fec89580db2e5b8b718556a4cd70202df03d27cb299458699"
+      sha256 "15857a90dde3812118f6ae61e117db9add59dd52cb6589e1ff839f8b0656ba48"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/koki-develop/blot/releases/download/v#{version}/blot_Linux_x86_64.tar.gz"
-      sha256 "57b200d0eeb6b4545162dc34a27873ff625c2bbc51bee3d35fb2051f817ef529"
+      sha256 "993ee5f60f0f80890dae356602afbd3ccce9793299b598b85c72c8571591d671"
     end
     on_arm do
       url "https://github.com/koki-develop/blot/releases/download/v#{version}/blot_Linux_arm64.tar.gz"
-      sha256 "33d3fb274e686f0f953445cf41b4c1c88d50c0116c11dbf998a246298658782c"
+      sha256 "2ba232c51709140b4b69935dfa252d5f2752d1a7c58b8c116c8db1fd9c278fc4"
     end
   end
 
