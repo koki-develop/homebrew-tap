@@ -1,11 +1,11 @@
 class Cubby < Formula
   desc "Secret store gated by Touch ID"
   homepage "https://github.com/koki-develop/cubby"
-  version "0.3.2"
+  version "0.4.0"
   license "MIT"
 
   url "https://github.com/koki-develop/cubby/releases/download/v#{version}/cubby_Darwin_arm64.tar.gz"
-  sha256 "495e406511f43cc2c2425cee4e7bef707ea0e2e01c5aec3e11ebd6006aa33759"
+  sha256 "d4759136f626f40ec448bd9710ca1a71830ba7e46e8adf98b3e764bce6c02f6d"
 
   depends_on arch: :arm64
   depends_on macos: :sonoma
